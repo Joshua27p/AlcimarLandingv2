@@ -1,25 +1,27 @@
 /* ***********custom properties*********** */
 :root {
-    --first-color: #d1b309 ;  
-    --second-color: rgb(44, 114, 31);
-    --color-smokewhite: rgba(239, 240, 238, 0.966);
-    --link-color: #818690;
-    --color-white: rgb(247, 247, 247);
-    --text-color: rgb(20, 20, 20);
-    --color-hover: #6b8f08;
-    --color-gray: rgb(150, 144, 144);
-    --color-black: rgb(49, 47, 47);
-    --cardGray: #f0f3fa;
-    --cardTitle: #6f717e;
-    --baseBackground: rgb(245, 243, 243);
-    --black-alpha-color: rgba(0, 0, 0, 0.415);
-    --white-aplha-color: rgba(225,255,255,0.5);
-    --font: 'Raleway', sans-serif;
-    --max-width: 1200px;
-    --header-height: 4rem;
-    --title-color: rgba(8, 8, 8, 0.374);
-    --color-light-gray: #f3f3f3;
-    --first-alpha-color: rgba(81, 172, 65, 0.517);
+  --baseBackground: rgb(245, 243, 243);
+  --black-alpha-color: rgba(0, 0, 0, 0.415);
+  --color-white: rgb(247, 247, 247);
+  --color-light-gray: #f3f3f3;
+  --color-hover: #6b8f08;
+  --color-gray: rgb(150, 144, 144);
+  --color-black: rgb(49, 47, 47);
+  --color-smokewhite: rgba(239, 240, 238, 0.966);
+  --carousel-bg-color: rgba(150, 150, 150, 0.5);
+  --cardGray: #f0f3fa;
+  --cardTitle: #6f717e;
+  --header-height: 4rem;
+  --font: 'Raleway', sans-serif;
+  --first-color: #d1b309 ;  
+  --first-alpha-color: rgba(81, 172, 65, 0.517);
+  --gray-dark-color: #585858;
+  --link-color: #818690;
+  --max-width: 1200px;
+  --text-color: rgb(20, 20, 20);
+  --title-color: rgba(8, 8, 8, 0.374);
+  --second-color: rgb(44, 114, 31);
+  --white-alpha-color: rgba(255, 255, 255, 0.623);
   }
 
 
@@ -87,40 +89,67 @@ p{
 }
 
 /* ************* components ************ */
-.modal{
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  right:0;
-  bottom: 0;
-  left:0;
+
+/* *********carousel************ */
+@keyframes carousel-slide{
+  0%{
+    transform: translateX(0%);
+  }
+  25%{
+    transform: translateX(-25%);
+  }
+  50%{
+    transform: translateX(-50%);
+  }
+  75%{
+    transform: translateX(-75%);
+  }
+}
+.carousel{
+  margin: 2rem auto;
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--carousel-bg-color);
+  overflow-x: hidden;
+}
+.carousel .slides{
+  padding-left: 0;
+  /* 100% por cada slide */
+  width: 400%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--black-alpha-color);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 1s;
+  list-style: none;
+  transition: transform .5s ease-in-out;
+  animation: carousel-slide 12s ease-in-out 3s;
 }
-.modal-content{
-  position: relative;
+#slide-1:checked ~ .slides{
+  transform: translateX(0%);
 }
-.modal-close{
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+#slide-2:checked ~ .slides{
+  transform: translateX(-25%);
 }
-.modal-close svg{
-  width: 3rem;
-  height: 3rem;
-  fill: var(--first-color);
+#slide-3:checked ~ .slides{
+  transform: translateX(-50%);
 }
-/* cuando nosotros hacemos refrencia al target, los estilos se van a activar cuando el target  de la pagina esté activado 
--Tecnica avanzada para selectores el id|= , sirve para que todos los que tengan el mismo ID y les da las mismas propiedades 
-*/
-.modal{id|="ruta-1"}:target{
-  opacity: 1;
-  pointer-events: auto;
+#slide-4:checked ~ .slides{
+  transform: translateX(-75%);
+}
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4{
+  background-color: var(--gray-dark-color);
+}
+.carousel input{
+  display: none;
+}
+.carousel label{
+  border: medium solid var(--gray-dark-color);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.25rem;
+  width: .75rem;
+  height: .75rem;
+  cursor: pointer;
 }
 /* ****************** Hero Image ********** */
 .hero-image{
@@ -145,6 +174,43 @@ p{
 .hero-image-title {
   font-size: 7.5vw;
   color: var(--hero-text-color)
+}
+
+
+.modal{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right:0;
+  bottom: 0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-alpha-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+.modal-content{
+  position: relative;
+}
+.modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.modal-close svg{
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
+}
+/* cuando nosotros hacemos refrencia al target, los estilos se van a activar cuando el target  de la pagina esté activado 
+-Tecnica avanzada para selectores el id|= , sirve para que todos los que tengan el mismo ID y les da las mismas propiedades 
+*/
+.modal{id|="ruta-1"}:target{
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
@@ -214,6 +280,11 @@ p{
 
 
 /* ***********utilities********* */
+.avatar{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
 .bg-gray-light{
   background-color: var(--color-light-gray);
 }
@@ -250,6 +321,9 @@ p{
   width: 250px;
   text-align: center;
   color:var(--title-color);
+}
+.text-first-color{
+  color: var(--first-color)
 }
 
 .text-center{
