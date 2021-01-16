@@ -106,9 +106,10 @@ p {
 .carousel {
   margin: 2rem auto;
   padding: 2rem 0;
+  max-width: 800px;
   text-align: center;
-  background-color: var(--carousel-bg-color);
   overflow-x: hidden;
+  background-color: var(--carousel-bg-color);
 }
 .carousel .slides {
   padding-left: 0;
@@ -246,6 +247,7 @@ p {
   text-align: center;
   background-color: var(--hero-opacity-color);
 }
+ 
 
 .hero-image-title {
   font-size: 7.5vw;
@@ -502,6 +504,7 @@ p {
   pointer-events: none;
   transition: all 0.5s ease-in-out;
 }
+ 
 .routes-card:hover .route-card-info {
   opacity: 1;
   pointer-events: auto;
