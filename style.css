@@ -19,6 +19,7 @@
   --link-color: #818690;
   --max-width: 1200px;
   --text-color: rgb(20, 20, 20);
+  --third-color:rgb(43, 87, 35);
   --title-color: rgba(8, 8, 8, 0.374);
   --second-color: rgb(44, 114, 31);
   --white-alpha-color: rgba(255, 255, 255, 0.623);
@@ -199,9 +200,37 @@ p{
   text-align: center;
   background-color: var(--color-white);
 }
+
+.contact-form-response svg{
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: var(--first-color)
+}
+
 .modal#gracias:target{
   opacity: 1;
   pointer-events: auto;
+}
+
+@media screen and (min-width: 1024px){
+  .contact-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+  font-size: 1rem;
+
+}
+.contact-form textarea,
+.contact-form-loader{
+  grid-column: span 2;
+}
+.contact-form input[type="submit"] {
+  margin-left: 0;
+}
 }
 
 /* ****************** Hero Image ********** */
@@ -261,7 +290,7 @@ p{
 /* cuando nosotros hacemos refrencia al target, los estilos se van a activar cuando el target  de la pagina esté activado 
 -Tecnica avanzada para selectores el id|= , sirve para que todos los que tengan el mismo ID y les da las mismas propiedades 
 */
-.modal{id|="ruta-1"}:target{
+.modal{id|="ruta-1"}:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -432,6 +461,14 @@ p{
 .contact-card > small{
   margin-top: -1rem;
 }
+
+.footer{
+  margin-bottom:var(--header-height);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--color-white);
+  background-color:var(--third-color);
+}
 .header{
   position: fixed;
   left: 0;
@@ -447,6 +484,7 @@ p{
   justify-content: space-between;
   align-items: center;
 }
+  
 .logo a{
   color: var(--first-color);
   font-weight: bold;
@@ -563,6 +601,10 @@ p{
   }
   .contact-cards{
     grid-template-columns: repeat(4, 24%);
+  }
+  .footer{
+    margin-bottom: 0;
+
   }
   
   .header{
