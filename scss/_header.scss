@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 1rem;
+  width: 100%;
+  height: $header-height;
+  background-color: $second-color;
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    a {
+      color: $first-color;
+      font-weight: bold;
+      font-size: 2rem;
+      text-decoration: none;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    height: calc($header-height - 0.5rem);
+  }
+}
