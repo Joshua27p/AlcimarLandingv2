@@ -1,0 +1,119 @@
+/* ***********modal*************** */
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black-alpha-color;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+
+  &-content {
+    position: relative;
+  }
+
+  &-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $first-color;
+    }
+  }
+
+  /* cuando nosotros hacemos refrencia al target, los estilos se van a activar cuando el target  de la pagina esté activado 
+  -Tecnica avanzada para selectores el id|= , sirve para que todos los que tengan el mismo ID y les da las mismas propiedades 
+  */
+  &[id|="ruta"]:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 0 .5rem;
+  }
+}
+/* END ***********modal*************** */
+
+/* ************* Menu ************ */
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: $header-height;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $second-color;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  
+  &-btn {
+    outline: thin solid $first-color;
+    border: 0;
+    cursor: pointer;
+    background-color: $second-color;
+    svg {
+      fill: $first-color;
+    }
+  }
+
+  &.is-active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  a {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: $first-color;
+
+    &:hover {
+      color: $color-white;
+      background-color: $first-color;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+
+    &-btn {
+      display: none;
+    }
+    
+    a {
+      padding: 0 1rem;
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    
+  }
+}
+
+/* END ************* Menu ************ */
+
+

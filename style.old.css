@@ -26,25 +26,25 @@
 }
 
 /* *************reset*********** */
-html {
+/* html {
   box-sizing: border-box;
   font-family: var(--font);
   font-size: 16px;
   scroll-behavior: smooth;
-}
+} */
 
-*,
+/* *,
 *::after,
 *::before {
   box-sizing: inherit;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   overflow-x: hidden;
   color: var(--text-color);
   background-color: var(--color-white);
-}
+} */
 a {
   color: var(--link-color);
   transition: all 0.5s ease-out;
@@ -480,6 +480,7 @@ p {
   font-size: 2rem;
   text-decoration: none;
 }
+
 .routes-card {
   position: relative;
   width: 100%;
@@ -560,7 +561,7 @@ p {
   fill: var(--gray-dark-color);
 }
 @media screen and (min-width: 768px) {
-  .contact-cards {
+  .contact-card {
     display: grid;
     grid-template-columns: repeat(2, 48%);
     justify-content: space-between;
@@ -589,7 +590,7 @@ p {
     justify-content: space-between;
     align-content: center;
   }
-  .contact-cards {
+  .contact-card {
     grid-template-columns: repeat(4, 24%);
   }
   .footer {

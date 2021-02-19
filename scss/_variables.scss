@@ -1,0 +1,30 @@
+// colors
+$baseBackground: rgb(245, 243, 243);
+$black-alpha-color: rgba(0, 0, 0, 0.415);
+$color-white: rgb(247, 247, 247);
+$color-light-gray: #f3f3f3;
+$color-hover: #6b8f08;
+$color-gray: rgb(150, 144, 144);
+$color-black: rgb(49, 47, 47);
+$color-smokewhite: rgba(239, 240, 238, 0.966);
+$carousel-bg-color: rgba(150, 150, 150, 0.5);
+$cardGray: #f0f3fa;
+$cardTitle: #6f717e;
+$first-color: #d1b309;
+$first-alpha-color: rgba(81, 172, 65, 0.517);
+$gray-dark-color: #585858;
+$link-color: #818690;
+$text-color: rgb(20, 20, 20);
+$third-color: rgb(43, 87, 35);
+$title-color: rgba(8, 8, 8, 0.374);
+$second-color: rgb(44, 114, 31);
+$white-alpha-color: rgba(255, 255, 255, 0.623);
+
+// constants
+$header-height: 4rem;
+$font: "Raleway", sans-serif;
+$max-width: 1200px;
+$hero-image:url('../images/bannernuevo.jpg');
+$hero-attachment: fixed;
+$hero-opacity-color: $black-alpha-color;
+$hero-text-color: $color-white;

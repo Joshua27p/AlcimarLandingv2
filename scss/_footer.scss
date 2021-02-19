@@ -1,0 +1,13 @@
+.footer {
+  margin-bottom: $header-height;
+  padding: 0.5rem;
+  text-align: center;
+  color: $color-white;
+  background-color: $third-color;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    margin-bottom: 0;
+  }
+}

@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="/dist/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <title>Alcimar</title>
   <meta name="description" content="Bienvenidos a Alcimar Cargo, estamos dispuestos a atenderlos con todo el profesionalismo que se nos caracteriza, su carga está a segura con nosotros.">
   <link rel="canonical" href="ruta-absoluta">
@@ -21,8 +22,8 @@
 </head>
 <body>
   <header class="header">
-    <section class="container">
-      <div class="logo">
+    <section class="header__container">
+      <div class="header__logo">
         <a href="index.html">Alcimar</a>
       </div>
       <button class="menu-btn">
@@ -33,28 +34,23 @@
         <a href="#inicio">Home</a>
         <a href="#acerca">Acerca</a>
         <a href="#servicios">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#testimonios">Testimonio</a>
+        <a href="#rutas">Rutas</a>
+        <!-- <a href="#testimonios">Testimonio</a> -->
         <a href="#contacto">Contacto</a>
       </nav>
-
     </section>
   </header>
   <section id="inicio" class="home">
-    <article class="hero-image" 
-    style=
-    "--hero-image:url('images/bannernuevo.jpg');
-    --hero-attachment: fixed;"
-    >
-      <aside class="hero-image-opacity" style="--hero-opacity-color:var(--black-alpha-color);">
+    <article class="hero-image">
+      <aside class="hero-image-opacity">
         <div class="hero-image-content">
-          <h2 class="hero-image-title" style="--hero-text-color: var(--color-white);">Bienvenidos a Alcimar</h2>
+          <h2 class="hero-image-title">Bienvenidos a Alcimar</h2>
           <a href="#contacto" class="btn">Contáctanos</a>
         </div>
       </aside>
     </article>
   </section>
-  <section id="acerca" class="about section container full-lg-screen">
+  <section id="acerca" class="about section container">
    <article class="text-lg-right">
      <aside class="text-lg-right">
        <h1>Alcimar Operador Logistico</h1>
@@ -76,28 +72,28 @@
    </article>
   </section>
   <section id="servicios" class="services section bg-gray-light">
-    <div class="container full-lg-screen">
+    <div class="container">
       <h2 class="section-title">Nuestros Servicios</h2>
-      <article class="service-card">
+      <article class="services-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,19V7h16 l0.002,12H4z"/><path d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z"/>
         </svg>
         <h3>Enviós a todo el Perú</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorum enim saepe sequi ab beatae dolorem ipsam in alias omnis corrupti, voluptas debitis modi fuga ut a repellendus deserunt autem?</p>
 
       </article>
-      <article class="service-card">
+      <article class="services-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"/><path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"/></svg>
         <h3>Embalaje de mercadería</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorum enim saepe sequi ab beatae dolorem ipsam in alias omnis corrupti, voluptas debitis modi fuga ut a repellendus deserunt autem?</p>
 
       </article>
-      <article class="service-card">
+      <article class="services-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20,3H7C5.897,3,5,3.897,5,5v2H4C2.897,7,2,7.897,2,9v10c0,1.103,0.897,2,2,2h6c1.103,0,2-0.897,2-2h8c1.103,0,2-0.897,2-2 V5C22,3.897,21.103,3,20,3z M6,9h4l-0.003,9H4V9H6z M12,17V9c0-1.103-0.897-2-2-2H7V5h11v12H12z"/></svg>
         <h3>Almacenaje</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorum enim saepe sequi ab beatae dolorem ipsam in alias omnis corrupti, voluptas debitis modi fuga ut a repellendus deserunt autem?</p>
 
       </article>
-      <article class="service-card">
+      <article class="services-card">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="20" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="6.343" cy="17.657" r="2"/><circle cx="17.657" cy="6.343" r="2"/><circle cx="4" cy="12" r="2.001"/><circle cx="20" cy="12" r="2"/><circle cx="6.343" cy="6.344" r="2"/><circle cx="17.657" cy="17.658" r="2"/></svg>
         <h3>Servicio Premium</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorum enim saepe sequi ab beatae dolorem ipsam in alias omnis corrupti, voluptas debitis modi fuga ut a repellendus deserunt autem?</p>
@@ -113,7 +109,7 @@
       <h2 class="section-title">Nuestras Rutas</h2>
       <a href="#ruta-1" class="routes-card">
       <img src="images/sliderlima.png" alt="ruta-1">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 1</h3>
           <p>Lima</p>
@@ -122,7 +118,7 @@
       </a>
       <a href="#ruta-2" class="routes-card">
       <img src="images/slidercontamana.png" alt="ruta-2">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 2</h3>
           <p>Contamana</p>
@@ -131,7 +127,7 @@
       </a>
       <a href="#ruta-3" class="routes-card">
       <img src="images/sliderhuanuco.png" alt="ruta-3">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 3</h3>
           <p>Huanuco</p>
@@ -140,7 +136,7 @@
       </a>
       <a href="#ruta-4" class="routes-card">
       <img src="images/slideriquitos.jpg" alt="ruta-4">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 4</h3>
           <p>Iquitos</p>
@@ -149,7 +145,7 @@
       </a>
       <a href="#ruta-5" class="routes-card">
         <img src="images/slideraguaytia.png" alt="ruta-5">
-        <aside class="route-card-info">
+        <aside class="routes-card-info">
           <div>
             <h3>Ruta 5</h3>
             <p>Aguaytía</p>
@@ -158,7 +154,7 @@
       </a>
       <a href="#ruta-6" class="routes-card">
       <img src="images/slidermoquegua.png" alt="ruta-6">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 6</h3>
           <p>Moquegua</p>
@@ -167,7 +163,7 @@
       </a>
       <a href="#ruta-7" class="routes-card">
       <img src="images/sliderpucallpa.png" alt="ruta-7">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 7</h3>
           <p>Pucallpa</p>
@@ -176,7 +172,7 @@
       </a>
       <a href="#ruta-8" class="routes-card">
       <img src="images/slidertarapoto.png" alt="ruta-8">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 8</h3>
           <p>Tarapoto</p>
@@ -185,7 +181,7 @@
       </a>
       <a href="#ruta-9" class="routes-card">
       <img src="images/slidertingomaria.png" alt="ruta-9">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 9</h3>
           <p>Tingomaría</p>
@@ -194,7 +190,7 @@
       </a>
       <a   href="#ruta-10" class="routes-card">
       <img src="images/slideryurimaguas.png" alt="ruta-10">
-      <aside class="route-card-info">
+      <aside class="routes-card-info">
         <div>
           <h3>Ruta 10</h3>
           <p>Yurimaguas</p>
@@ -209,7 +205,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA LIMA</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención;</b></small>
@@ -228,7 +224,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA CONTAMANA</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -247,7 +243,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA HUANUCO</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Huanuco: Jr. Aguilar con Emilio Valdizan</small>
         <small><b>Horario de atención</b></small>
@@ -266,7 +262,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA IQUITOS</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -285,7 +281,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA AGUAYTÍA</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -304,7 +300,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA MOQUEGUA</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -323,7 +319,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA PUCALLPA</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Pucallpa: av. Iquitos N°534 Crnel. Portillo, Calleria</small>
         <small><b>Horario de atención</b></small>
@@ -342,7 +338,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA TARAPOTO</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -361,7 +357,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA TINGOMARÍA</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -380,7 +376,7 @@
       </a>
       <article class="routes-modal">
       <h3>RUTA YURIMAGUAS</h3>
-      <aside class="route-details">
+      <aside class="routes-details">
         <small><b>DIRECCIÓN:</b></small>
         <small>Av. 28 de julio 1543 La Victoria</small>
         <small><b>Horario de atención</b></small>
@@ -456,7 +452,7 @@
   <section id="contacto" class="contact section">
     <div class="container">
       <h2 class="section-title">Contáctanos</h2>
-      <article class="contact-cards">
+      <article class="contact-card__container">
         <aside class="contact-card box-shadow-1">
           <svg width="37" height="28" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -487,8 +483,7 @@
         </aside>
         <aside class="contact-card box-shadow-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-        <path
-          d="M16.018,3.815L15.232,8h-4.966l0.716-3.815L9.018,3.815L8.232,8H4v2h3.857l-0.751,4H3v2h3.731l-0.714,3.805l1.965,0.369 L8.766,16h4.966l-0.714,3.805l1.965,0.369L15.766,16H20v-2h-3.859l0.751-4H21V8h-3.733l0.716-3.815L16.018,3.815z M14.106,14H9.141 l0.751-4h4.966L14.106,14z" />
+            <path d="M16.018,3.815L15.232,8h-4.966l0.716-3.815L9.018,3.815L8.232,8H4v2h3.857l-0.751,4H3v2h3.731l-0.714,3.805l1.965,0.369 L8.766,16h4.966l-0.714,3.805l1.965,0.369L15.766,16H20v-2h-3.859l0.751-4H21V8h-3.733l0.716-3.815L16.018,3.815z M14.106,14H9.141 l0.751-4h4.966L14.106,14z" />
           </svg>
           <h5>SOCIAL MEDIA:</h5>
           <small class="social-media">
@@ -551,6 +546,6 @@
     <small>Sitio diseñado por <a href="maphack.pe">Maphack.pe</a></small>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
